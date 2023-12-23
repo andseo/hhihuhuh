@@ -1,0 +1,87 @@
+.product-item {
+    transition: transform 0.3s ease; /* Smooth transition for the transform */
+    transform-origin: bottom; /* Zooms towards the top */
+    width: 150px; /* Width based on the image */
+    border-radius: 20px; /* Rounded corners */
+    overflow: hidden; /* Ensures content fits within the border-radius */
+    font-family: 'Balsamiq Sans', cursive, Arial, sans-serif;
+    height: 245px;
+    cursor: pointer;
+    position: relative; /* For absolute positioning of the badge */
+    background-color: #fff; /* Background color for the product */
+  }
+  
+  .product-item:hover {
+    transform: scale(1.05); /* Scales the item to 105% of its original size on hover */
+  }
+  
+  .discount-badge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #8A2BE2; /* Badge background color */
+    color: #fff; /* Text color */
+    padding: 5px;
+    border-bottom-right-radius: 10px; /* Rounded corner on the badge */
+  }
+  
+  .product-image img {
+    position: relative;
+    width: 100%;
+    height: 145px; /* Ensure image takes full width of its container */
+    display: block; /* Removes bottom space under the image */
+  }
+  
+  .product-info {
+    text-align: center; /* Center-align the text */
+    padding: 0px; /* Padding around content */
+  }
+  
+  .product-title {
+    /* Add your product title styles here */
+    margin-top: 7px;
+  }
+  
+  .user-avatar {
+    position: absolute;
+    bottom: 10px; /* Adjust as necessary for exact positioning */
+    left: 10px; /* Adjust as necessary for exact positioning */
+    width: 37px; /* Size of the avatar */
+    height: 37px; /* Size of the avatar */
+    border-radius: 50%; /* Makes the avatar circular */
+}
+  
+  .username {
+    font-size: 0.8em; /* Adjust the font size as needed */
+    color: #333; /* Font color for the username */
+    height: 20px;
+    width: 20px;
+  }
+  
+  
+.product-price {
+  position: absolute;
+  bottom: 10px; /* Adjust as necessary for exact positioning */
+  right: 10px; /* Adjust as necessary for exact positioning */
+  background-color: #fff; /* Background color for readability */
+  padding: 5px;
+  border-radius: 5px; /* Optional, for rounded corners */
+  color: #E55300; /* Highlight color for the current price */
+  font-weight: bold; /* Make current price bold */
+  /* Add more styling as needed */
+}
+
+  
+  .original-price {
+    text-decoration: line-through; /* Strike-through for original price */
+    color: #777; /* Grayed out color */
+    margin-right: 5px; /* Space between original and current price */
+  }
+  
+  .current-price {
+    color: #E55300; /* Highlight color for the current price */
+    font-weight: bold; /* Make current price bold */
+  }
+  
+  /* Additional styles for product grid and product card remain unchanged */
+  

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Aymanshop</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Style adjustments for full page layout */
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .container {
+            display: flex;
+            height: 100%;
+        }
+
+        .left-panel {
+            background: linear-gradient(to bottom right, #000000 0%, #42402d 100%);
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 50px;
+            color: white;
+            text-align: center;
+        }
+        .right-panel {
+    background-color: #fff;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers vertically in the flex container */
+    align-items: center; /* Centers horizontally in the flex container */
+    padding: 50px;
+    text-align: center;
+}
+
+
+        h1 {
+            margin-bottom: 3em;
+            font-size: 35px;
+            color: #333;
+            font-family: 'Balsamiq Sans', cursive, Arial, sans-serif;
+
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 80%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+        .form-container {
+         display: flex;
+          flex-direction: column;
+          align-items: center;
+           width: 100%; /* Ensures the form takes the full width of its parent */
+        }
+
+
+        .login-button {
+            border: none;
+            background-color: #333;
+            color: white;
+            font-size: 16px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: auto; /* Change from a percentage to auto if necessary */
+            padding: 15px 60px;
+        }
+
+        .login-button:hover {
+            background-color: #555;
+        }
+
+        .forgot-password {
+            color: #333;
+            text-decoration: none;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .separator {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .separator::before, .separator::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .separator-text {
+            color: #333;
+        }
+
+        .google-button {
+            font-size: 16px;
+            color: #333;
+            background-color: #fff;
+            border: 2px solid #ccc;
+            border-radius: 50px;
+            padding: 10px 15px;
+            cursor: pointer;
+            transition: border-color 0.3s ease;
+        }
+
+        .google-button:hover {
+            border-color: #bbb;
+        }
+
+        .create-account {
+            color: #333;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .bird-image {
+            width: 350px; /* Adjust as necessary */
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .left-panel-text {
+            font-size: 35px;
+            margin-bottom: 20px;
+            font-family: 'Balsamiq Sans', cursive, Arial, sans-serif;
+            color: #ffffff;
+        }
+
+        .google-button img {
+    margin-right: 8px; /* Space between the image and the text */
+    height: 23px; /* Adjust size as needed */
+}
+.register-text {
+    color: #333;
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+.register-text a {
+    color: #555;
+    text-decoration: none;
+}
+
+.register-text a:hover {
+    text-decoration: underline;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <!-- Add your bird image here -->
+            <img class="bird-image" src="../images/carta.png" alt="Bird Illustration">
+            <p class="left-panel-text">Discover sheap products or buy your own.</p>
+        </div>
+        <div class="right-panel">
+            <h1>Welcome to Aymanshop</h1>
+            <form method="POST" action="/login">
+                <input type="text" placeholder="Username" name="username">
+                <input type="password" placeholder="Password" name="password">
+                <button type="submit" class="login-button">Sign in</button>
+            </form>            
+            <div class="separator">
+                <div class="separator-text">or</div>
+            </div>
+            <button class="google-button">
+                <img src="../images/icons8-google-144.png" alt="G" style="vertical-align: middle; margin-right: 5px;">Sign in with Google
+            </button>
+            <p class="register-text">
+                Don't have an account? <a href="/register">Register</a>
+            </p>
+                    </div>
+                    
+    </div>
+</body>
+</html>

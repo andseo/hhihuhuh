@@ -1,0 +1,108 @@
+.pes-account-section {
+    width: 100%;
+    padding: 20px;
+    padding-left: 140px;
+    padding-right: 140px;
+    box-sizing: border-box;
+  }
+  
+  .pes-account-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-family: 'Balsamiq Sans', cursive, Arial, sans-serif;
+    text-align: left;
+  }
+  
+  .pes-account-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .pes-account-item {
+    padding: 15px;
+    background-color: white;
+    margin-bottom: 10px; /* space between items */
+    border-radius: 8px; /* rounded corners */
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .pes-account-item:hover {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* shadow on hover */
+  }
+  
+  .account-details {
+    /* Add styles for your account details here */
+  }
+  .product-card {
+    transition: transform 0.3s ease; /* Smooth transition for the transform */
+    transform-origin: bottom; /* Zooms towards the top */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    background-color: rgb(255, 255, 255);
+    font-family: 'Balsamiq Sans', cursive, Arial, sans-serif;
+    margin-top: 20px;
+    gap: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  .product-card:hover {
+    transform: scale(1.05); /* Scales the item to 105% of its original size on hover */
+  }
+  
+  .product-card-image img {
+    width: 120px; /* or your preferred size */
+    height: auto;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+  .product-card-details {
+    flex-grow: 1;
+  }
+  
+  .product-card-title {
+    font-size: 1em;
+    margin-bottom: 5px;
+  }
+  
+  .product-card-genres {
+    display: flex;
+  }
+  
+  .product-genre {
+    background: #eef;
+    border-radius: 20px;
+    padding: 2px 5px;
+    margin-right: 5px;
+    font-size: 0.8em;
+  }
+  
+  .product-card-purchase {
+    display: flex;
+    align-items: center;
+  }
+
+  
+  .product-discount {
+    font-size: 0.8em;
+    color: red; /* Or your preferred color */
+    margin-right: 5px;
+    font-family: 'Balsamiq Sans', cursive, Arial, sans-serif;
+
+  }
+  
+  .product-fav-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #888;
+  }
+  
+  .product-fav-btn:hover {
+    color: #f00;
+  }
+    

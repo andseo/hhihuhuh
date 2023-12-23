@@ -1,0 +1,309 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Balsamiq Sans', cursive, Arial, sans-serif;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  overflow-y: auto; /* Allow vertical scroll */
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  flex-direction: column; /* Stack children (header, main, footer) vertically */
+}
+
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure the header is above other elements */
+  height: 65px; /* Your header height */
+  padding: 10px 20px; /* Padding inside the header */
+  /* Add any other header styles you have here */
+}
+
+main {
+  margin-top: 105px; /* Same as the height of the header */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center; /* Center children vertically */
+  width: 100%; /* Ensure the main content takes up the full width */
+  flex-grow: 1; /* Allows main to expand to fill available space */
+  /* Add any other main styles you have here */
+}
+
+
+/* For the HOT STUFF section */
+.hot-stuff {
+  width: 100%; /* or any specific width */
+  /* other styles */
+}
+
+/* For the RECOMMENDED FOR YOU section */
+.recommended-for-you {
+  width: 100%; /* or any specific width */
+  /* other styles */
+}
+
+
+
+
+/* Grid setup for the product section */
+.product-section {
+  position: relative; /* This makes it the positioning context for absolute children */
+  display: flex; /* or display: grid; depending on your layout */
+  justify-content: center; /* This centers the child horizontally */
+  align-items: center; 
+  grid-template-columns: repeat(auto-fill, minmax(146px, 1fr));
+  padding-left: 1%;
+  margin-right: none;
+  max-width: 1020px; /* Maximum width of the product grid */
+  width: 90%; /* The grid takes up 100% width of its container */
+  margin: 0;
+}
+.product-poster {
+  flex: 1;
+  width: 100%;
+  padding-top: 50%; /* This maintains the aspect ratio of the carousel */
+  border-radius: 6%;
+  margin-top: 0.5%;
+  position: relative; /* Required for absolute positioning of the carousel controls */
+  overflow: hidden; /* Clipping the contents to the rounded corners */
+  margin-right: 1.6%;
+  display: flex; /* Align slides in a row */
+}
+
+.section-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-100%);
+  margin-left: 20px;
+  font-size: 1.1em;
+  font-weight: bold;
+  padding-bottom: 5px;
+  color: #000000;
+  text-transform: uppercase;
+  display: inline-block;
+  font-family: 'Balsamiq Sans', cursive, Arial, sans-serif;
+}
+
+.section-subtitle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-113%);
+  margin-left: 695px;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-top: 0.5%;
+  padding-bottom: 5px;
+  color: #000000;
+  text-transform: uppercase;
+  font-family: 'Balsamiq Sans', cursive, Arial, sans-serif;
+}
+
+.additional-section-title {
+  color: #333; /* Example color */
+  font-size: 1.4em;
+  margin-left: -788px;
+  text-align: left; /* Align text to the left */
+  margin-top: 0px; /* Space above the title */
+  margin-bottom: 20px; /* Space below the title */
+  padding-left: 15px; /* Optional: add padding to align inside the container */
+  font-family: 'Balsamiq Sans', cursive, Arial, sans-serif;
+
+}
+
+
+
+.product-poster-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #FFF;
+  background-color: rgba(128, 128, 128, 0.5); /* Soft grey color */
+  backdrop-filter: blur(4px); /* Blur effect */
+  border-radius: 50%; /* Fully rounded */
+  width: 40px; /* Bigger size for touch targets */
+  height: 40px; /* Same as width for circle shape */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+  font-size: 24px; /* Larger icon size for visibility */
+  display: none; /* Hide buttons by default */
+}
+
+.carousel-control.left { left: 15px; }
+.carousel-control.right { right: 15px; }
+
+.product-poster:hover .carousel-control {
+  display: flex; /* Show buttons on hover */
+}
+
+.carousel-control:hover {
+  background-color: rgba(128, 128, 128, 0.7); /* Slightly darker on hover */
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.product-poster-content img {
+  max-width: 150%;
+  max-height: 150%;
+  display: block; /* Remove extra space under the image */
+}
+
+
+.product-items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns of equal width */
+  gap: 20px; /* Space between grid items */
+  margin-right: 1%;
+  margin-top: 0.8%;
+
+}
+
+
+/* Adjust the grid layout for the 2x2 product items */
+.product-section > .product-item:nth-child(2) {
+  grid-row: 1 / 2;
+}
+
+.product-section > .product-item:nth-child(3) {
+  grid-row: 1 / 2;
+  grid-column: 2 / 3;
+}
+
+.product-section > .product-item:nth-child(4) {
+  grid-row: 2 / 3;
+}
+
+.product-section > .product-item:nth-child(5) {
+  grid-row: 2 / 3;
+  grid-column: 2 / 3;
+}
+
+
+.additional-product-section {
+  max-width: 900px; /* This matches the width of the product grid above */
+  margin: 0 auto; /* Centers the section */
+  display: flex;
+  flex-direction: column; /* Stacks children vertically */
+  align-items: center; /* Aligns children horizontally */
+  width: 100%; /* Full width */
+  margin-top: 17px; /* Space above the section */
+}
+
+.additional-product-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(146px, 1fr));
+  grid-template-columns: repeat(6, 1fr); /* Create exactly 5 columns */
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  width: 100%;
+}
+
+
+
+#loadMore {
+  grid-column: 1 / -1; /* Span across all columns */
+  justify-self: center; /* Center the button within the column */
+  padding: 10px 20px;
+  border: 2px solid #ccc;
+  border-radius: 25px;
+  align-items: center;
+  cursor: pointer;
+  background: none;
+  color: #333;
+  font-size: 16px;
+  font-family: 'Balsamiq Sans', cursive, Arial, sans-serif;
+  width: fit-content; /* Makes the button width as wide as its content */
+  display: block; /* Allows the button to respect the margin: auto */
+}
+
+#loadMore:hover {
+  background-color: #ffffff;
+  border-color: #bbb;
+}
+
+#loadMorePes {
+  grid-column: 1 / -1; /* Span across all columns */
+  justify-self: center; /* Center the button within the column */
+  padding: 10px 20px;
+  border: 2px solid #ccc;
+  border-radius: 25px;
+  align-items: center;
+  cursor: pointer;
+  background: none;
+  color: #333;
+  font-size: 16px;
+  font-family: 'Balsamiq Sans', cursive, Arial, sans-serif;
+  width: fit-content; /* Makes the button width as wide as its content */
+  display: block; /* Allows the button to respect the margin: auto */
+}
+
+#loadMorePes:hover {
+  background-color: #ffffff;
+  border-color: #bbb;
+}
+
+/* Dropdown styles */
+.signin-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none; /* Initially hidden */
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.779); /* Semi-transparent white background */
+    backdrop-filter: blur(10px); /* Blurs the area behind the nav */
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 15px; /* Optional: rounded corners */
+  top: 100%; /* Position the dropdown right below the sign-in button */
+  left: 50%;
+  transform: translateX(-60%);
+  padding: 12px 16px;
+}
+
+/* Style the buttons inside the dropdown */
+.dropdown-button {
+  text-align: left;
+  width: 100%;
+  padding: 8px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #333;
+  font-size: 1rem;
+}
+
+.dropdown-button:hover {
+  background-color: rgba(255, 255, 255, 0.779); /* Semi-transparent white background */
+    backdrop-filter: blur(10px); /* Blurs the area behind the nav */
+}
+
+.icon {
+  margin-right: 8px;
+}

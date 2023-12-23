@@ -1,0 +1,161 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #eeeeee;
+    /* Assuming you want a white background for the body */
+  }
+  
+  /* Header Styles */
+  header {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.779); /* Semi-transparent white background */
+    backdrop-filter: blur(10px); /* Blurs the area behind the nav */
+    justify-content: space-between; /* This distributes space around items */
+    height: 65px;
+    padding: 10px 20px; /* Padding around the header */
+    font-family: 'Balsamiq Sans', cursive, Arial, sans-serif;
+  
+
+  }
+  
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* Maximum width of the header content */
+    margin: 0 auto; /* Centers the header container */
+  }
+  
+  .logo-container .logo {
+    font-size: 24px; /* Size of the logo text */
+    color: #333; /* Color of the logo text */
+    text-decoration: none; /* Removes underline from the logo link */
+  }
+  
+  .search-container {
+    position: relative;
+    display: flex;
+    border: none; 
+    align-items: center;
+    justify-content: center; /* This will center the .input-group horizontally */
+    flex-grow: 1; /* Allows the search bar to take up available space */
+    margin: 0 1rem; /* Adjusted for spacing on both sides */
+    font-family: 'Balsamiq Sans', cursive, Arial, sans-serif;
+
+  }
+  
+  .search-category {
+    padding: 7px 10px;
+    outline: none; /* Removes the focus outline, use with caution */
+    background-color: transparent;
+    border: none; /* Removes the border inside the input group */
+    border-radius: 20px 0 0 20px; /* Rounded corners on the left side */
+    font-family: 'Balsamiq Sans', cursive, Arial, sans-serif;
+
+  }
+  
+  .search-button {
+    padding: 0.3125rem 0.625rem;
+    background-color: transparent; /* Set the background to transparent */
+    border: none;
+    cursor: pointer;
+    border-radius: 0 20px 20px 0; /* Adjust as needed for rounded corners */
+    transition: transform 0.3s ease; /* Smooth transition for transform property */
+  }
+  
+  .search-button:hover {
+    transform: scale(1.1); /* Scales up the button to 110% when hovered */
+  }
+  
+  /* Style for the SVG icon */
+  .fa-magnifying-glass {
+    width: 1rem; /* Example size, adjust as needed */
+    height: 1rem; /* Example size, adjust as needed */
+    fill: currentColor; /* Icon color will be the same as the text color */
+    transition: transform 0.3s ease; /* Smooth transition for transform property */
+  }
+  
+  .fa-magnifying-glass:hover {
+    transform: scale(1.2); /* Scales up the icon to 120% when hovered */
+  }
+  
+  
+  .search-input {
+    flex-grow: 1;
+    padding: 0.3125rem 0.625rem; /* 5px top/bottom, 10px left/right */
+    border: none; /* Removes the border */
+    outline: none; /* Removes the focus outline, use with caution */
+    background-color: transparent;
+    border-radius: 30px; /* If you want to keep the input rounded */
+    font-family: 'Balsamiq Sans', cursive, Arial, sans-serif;
+
+  }
+  
+  /* Hide the 'X' clear button on webkit browsers */
+  .search-input::-webkit-search-cancel-button {
+    -webkit-appearance: none; /* Hides the clear button */
+    appearance: none;
+  }
+  
+  /* For Microsoft Edge */
+  .search-input::-ms-clear {
+    display: none;
+  }
+  
+  
+  .input-group {
+    display: flex;
+    height: 36px;
+    border-radius: 20px; /* Adjust as needed for rounded corners */
+    border: 1px solid #8a8a8a;
+    overflow: hidden; /* Ensures inner elements conform to the group's border radius */
+  }
+  
+  
+  .header-actions {
+    display: flex;
+    align-items: center;
+  }
+  
+  .cart-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px; /* You might need to adjust this */
+    display: flex; /* To center SVG icon */
+    align-items: center; /* Align SVG vertically */
+    justify-content: center; /* Center SVG horizontally */
+    padding: 0.5em; /* Add some padding around the icon */
+  }
+  
+  .cart-button svg {
+    width: 1em; /* Adjust the size of the SVG icon as needed */
+    height: 1em;
+    fill: currentColor; /* Icon color will be the same as the text color */
+  }
+  
+  .sign-in-button {
+    background: none;
+    border: none;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 16px; /* Adjust the size as needed */
+    font-family: 'Balsamiq Sans', cursive, Arial, sans-serif;
+  }
+  
+  .sign-in-button {
+    padding: 5px 15px;
+    border: 1px solid #ccc; 
+    border-radius: 20px; /* Adjust as needed for rounded corners */
+    /* Adds a border to the sign-in button */
+  }
+  
+ 

@@ -1,0 +1,293 @@
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+
+    main {
+      display: flex;
+      justify-content: center;
+      align-items: center; /* Center children vertically */
+      padding: 0px; /* Add padding if you want some space around the main content */
+      overflow: auto; /* Adds scroll if content overflows */
+      margin-top: 1%;
+      margin-bottom: 0%;
+    }
+
+     /* Responsive design adjustments */
+  @media (max-width: 768px) {
+    .search-category,
+    .search-input,
+    .search-button {
+      font-size: 14px; /* Smaller text on smaller screens */
+    }
+  
+    .cart-button,
+    .sign-in-button {
+      font-size: 14px; /* Smaller icons on smaller screens */
+    }
+  }
+  .custom-select-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .custom-select {
+    position: relative;
+  }
+  
+  .search-category {
+    appearance: none; /* Remove default select styling */
+    -webkit-appearance: none; /* For Safari */
+    padding-right: 1.8em; /* Make space for the arrow */
+    margin-top: 0.1em;
+    /* Rest of the styles for your select element */
+  }
+  
+  .custom-select-arrow {
+    position: absolute;
+    right: 0.5em;
+    margin-top: 0.1em;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; /* This makes it so clicks on the arrow will go through to the select element */
+  }
+  
+  .custom-select-arrow svg {
+    width: 1em;
+    height: 1em;
+  }
+ /* Responsive design adjustments for phone screens */
+    .header-container {
+      display: flex;
+      justify-content: space-between; /* This aligns children elements to each side and center */
+      align-items: center; /* This centers children vertically */
+      padding: 10px; /* Add some padding for aesthetic spacing */
+    }
+  
+    .logo-container {
+      flex: 1; /* Flex value to allow for growth relative to siblings */
+      display: flex;
+      justify-content: flex-start; /* Align logo to the start */
+    }
+  
+    .search-container {
+      flex: 4; /* Allow search bar to take most of the space */
+      display: flex;
+      justify-content: center; /* Center search bar */
+    }
+  
+    .input-group {
+      width: 100%; /* Allow input group to fill the container */
+    }
+  
+    .search-input,
+    .search-category {
+      width: 100%; /* Full width for search input and category dropdown */
+      font-size: 16px; /* Legible font size */
+    }
+  
+    .header-actions {
+      flex: 1; /* Flex value to allow for growth relative to siblings */
+      display: flex;
+      justify-content: flex-end; /* Align cart icon to the end */
+    }
+  
+    /* Adjust the size of the cart SVG icon */
+    .cart-button svg {
+      width: 24px; /* Adjust based on actual size needed */
+      height: 24px;
+    }
+  
+    /* Hide the sign-in button on small screens to match the desired layout */
+    .sign-in-button {
+      display: none;
+    }
+  
+    
+    .section-title {
+      display: none; /* Show the subtitle on small screens */
+    }
+  
+    .section-subtitle {
+      display: none; /* Show the subtitle on small screens */
+    
+    }
+  
+   
+    .product-section {
+      position: relative; /* Add relative positioning to contain the absolute element */
+     
+      margin: 0 auto; /* Centers the section if less than 100% width */
+      flex-direction: column;
+      padding: 0; /* Removes padding to ensure full width utilization */
+    }
+  
+    .product-poster {
+      width: 100%; /* Full width */
+      height: 100%;
+      padding-top: 56.25%; /* Aspect ratio for 16:9 - adjust as needed for your content */
+      border-radius: 20px; /* Rounded corners */
+      overflow: hidden; /* To clip the contents to the rounded shape */
+      margin-bottom: 16px; /* Adds some space between poster and items */
+    }
+  
+    .product-poster-content img {
+      width: 100%; /* Ensures the image covers the width */
+      height: auto; /* Adjusts the height automatically */
+      position: absolute; /* Absolute position */
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); /* Center the image */
+    }
+  
+    .product-item {
+        transition: transform 0.3s ease; /* Smooth transition for the transform */
+        transform-origin: bottom; /* Zooms towards the top */
+        width: 165px; /* Width based on the image */
+        border-radius: 20px; /* Rounded corners */
+        overflow: hidden; /* Ensures content fits within the border-radius */
+        font-family: 'Balsamiq Sans', cursive, Arial, sans-serif;
+        height: 245px;
+        cursor: pointer;
+        position: relative; /* For absolute positioning of the badge */
+        background-color: #fff; /* Background color for the product */
+      }
+      
+      .product-item:hover {
+        transform: scale(1.05); /* Scales the item to 105% of its original size on hover */
+      }
+      
+      .discount-badge {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #8A2BE2; /* Badge background color */
+        color: #fff; /* Text color */
+        padding: 5px;
+        border-bottom-right-radius: 10px; /* Rounded corner on the badge */
+      }
+      
+      .product-image img {
+        position: relative;
+        width: 100%;
+        height: 145px; /* Ensure image takes full width of its container */
+        display: block; /* Removes bottom space under the image */
+      }
+      
+      .product-info {
+        text-align: center; /* Center-align the text */
+        padding: 0px; /* Padding around content */
+      }
+      
+      .product-title {
+        /* Add your product title styles here */
+        margin-top: 7px;
+      }
+      
+      .user-avatar {
+        position: absolute;
+        bottom: 10px; /* Adjust as necessary for exact positioning */
+        left: 10px; /* Adjust as necessary for exact positioning */
+        width: 37px; /* Size of the avatar */
+        height: 37px; /* Size of the avatar */
+        border-radius: 50%; /* Makes the avatar circular */
+    }
+      
+      .username {
+        font-size: 0.8em; /* Adjust the font size as needed */
+        color: #333; /* Font color for the username */
+        height: 20px;
+        width: 20px;
+      }
+      
+      
+    .product-price {
+      position: absolute;
+      bottom: 10px; /* Adjust as necessary for exact positioning */
+      right: 10px; /* Adjust as necessary for exact positioning */
+      background-color: #fff; /* Background color for readability */
+      padding: 5px;
+      border-radius: 5px; /* Optional, for rounded corners */
+      color: #E55300; /* Highlight color for the current price */
+      font-weight: bold; /* Make current price bold */
+      /* Add more styling as needed */
+    }
+    
+      
+      .original-price {
+        text-decoration: line-through; /* Strike-through for original price */
+        color: #777; /* Grayed out color */
+        margin-right: 5px; /* Space between original and current price */
+      }
+      
+      .current-price {
+        color: #E55300; /* Highlight color for the current price */
+        font-weight: bold; /* Make current price bold */
+      }
+      
+      /* Additional styles for product grid and product card remain unchanged */
+      
+    
+    
+    .additional-product-section {
+    
+      display: none;
+   
+    } 
+  
+    .footer {
+      
+      display: none;
+  
+    }
+  
+    .comparison-section {
+      display: none;
+    }
+    
+    
+    .comparison-image img {
+     display: none;
+    }
+    
+    .comparison-content {
+      display: none;
+    }
+    
+    .comparison-content h2 {
+     display: none;
+  
+    }
+    
+    .comparison-content p {
+     display: none;
+    }
+    
+    .btn-get-skins {
+      display: none;
+    }
+    
+    .btn-get-skins:hover {
+      display: none;
+    }
+    
+    
+  
+    /* Add additional responsive styling for elements inside .product-item as needed */
+  }
+
+  @media (max-width: 768px) {  /* Adjust the max-width as needed */
+    .additional-product-items {
+      display: none;
+    }
+  }
+  @media (max-width: 768px) { 
+    .pes-account-section {
+      display: none;
+    }
+  }
+  @media (max-width: 768px) {  /* Adjust the max-width as needed */
+    #loadMorePes {
+      display: none;
+    }
+  }
+  
